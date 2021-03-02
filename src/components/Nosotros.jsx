@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Nosotros = () => {
 
@@ -22,7 +23,9 @@ const Nosotros = () => {
                 {
                     equipo.map((item) => (
                         <li key={item.id}>
-                            {item.name} - {item.expansion   }
+                          <Link to={`/nosotros/${item.id}`}>
+                            {item.name} - {item.expansion}
+                          </Link>
                         </li>
                     ))
                 }
